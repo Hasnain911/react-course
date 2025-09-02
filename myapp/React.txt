@@ -1,0 +1,53 @@
+1 . Diffing -> In React, diffing refers to the process of comparing two versions of the Virtual DOM to determine what has changed, so that React can efficiently update the real DOM.
+
+2 . Declarative UI
+
+3 . Babel is a JavaScript compiler used in React projects to convert modern JavaScript (ES6+ and JSX) into older JavaScript that browsers can understand.
+
+4 . npm is a tool to install and manage JavaScript packages — like a library installer for your code.
+  
+  . Vite is a tool that helps you build and run web apps quickly while you're coding and also prepares them for going live.
+
+  . Bun is a new, super-fast tool that can do what both npm and Vite do, plus run your code — all in one.
+
+Relation between index.html , main.jsx and app.jsx:
+  index.html
+  └── <div id="root"></div>     <-- Empty div
+
+main.jsx
+  └── ReactDOM.createRoot(document.getElementById('root'))
+          .render(<App />)     <-- Injects <App /> into "root" div
+
+App.jsx
+  └── Your entire React UI     <-- This gets shown in browser
+
+
+Regular function vs React component:
+A React component is a special function that returns JSX and starts with a capital letter, so React knows to render it as UI, not run it like a regular function.
+
+1 . camelCase – Used for variable and function names, starting with lowercase and capitalizing subsequent words (e.g., myVariableName).
+2 . kebab-case – Used for file names and CSS class names, all lowercase with words separated by hyphens (e.g., my-component).
+3 . snake_case – Used mainly in Python and APIs, all lowercase with words separated by underscores (e.g., my_variable_name).
+4 . PascalCase – Used for React components and classes, with each word capitalized (e.g., MyComponent).
+
+
+.You use ./ when you're importing files that are local to the current folder.
+import './index.css'       // same folder
+import '../App.css'        // parent folder
+import './components/Nav'  // subfolder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

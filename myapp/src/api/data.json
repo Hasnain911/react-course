@@ -1,0 +1,58 @@
+ [
+  {
+    "name": "Great Wall of China",
+    "country": "China",
+    "location": "China",
+    "year_built": "7th century BC",
+    "description": "A series of fortifications built to protect Chinese states from invasions.",
+    "image": "/great-wall.avif"
+  },
+  {
+    "name": "Petra",
+    "country": "Jordan",
+    "location": "Ma'an Governorate",
+    "year_built": "5th century BC",
+    "description": "An ancient city famous for its rock-cut architecture and water conduit system.",
+    "image": "/petra.jpeg"
+  },
+  {
+    "name": "Christ the Redeemer",
+    "country": "Brazil",
+    "location": "Rio de Janeiro",
+    "year_built": "1931",
+    "description": "An iconic Art Deco statue of Jesus Christ overlooking Rio de Janeiro.",
+    "image": "/redeemer.jpg"
+  },
+  {
+    "name": "Machu Picchu",
+    "country": "Peru",
+    "location": "Cusco Region",
+    "year_built": "15th century",
+    "description": "An Incan citadel set high in the Andes Mountains.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg"
+  },
+  {
+    "name": "Chichen Itza",
+    "country": "Mexico",
+    "location": "Yucatán",
+    "year_built": "600 AD",
+    "description": "A large pre-Columbian city built by the Maya civilization.",
+    "image": "/chichen.jpeg"
+  },
+  {
+    "name": "Roman Colosseum",
+    "country": "Italy",
+    "location": "Rome",
+    "year_built": "80 AD",
+    "description": "A massive amphitheatre used for gladiatorial contests and public spectacles.",
+    "image": "/roman.jpeg"
+  },
+  {
+    "name": "Taj Mahal",
+    "country": "India",
+    "location": "Agra, Uttar Pradesh",
+    "year_built": "1648",
+    "description": "A white marble mausoleum built by Mughal Emperor Shah Jahan in memory of his wife.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg"
+  }
+]

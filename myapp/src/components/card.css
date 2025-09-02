@@ -1,0 +1,50 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+li {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+li img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+li p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+li p:first-of-type {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.h-world{
+  background: beige;
+}
+.h-world-active{
+  background: chartreuse;
+}
+.b-radius{
+  border: 2px;
+  border-radius: 20px;
+}

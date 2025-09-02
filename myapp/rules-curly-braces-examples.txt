@@ -1,0 +1,12 @@
+// ✅ Allowed
+<p>{5 * 2}</p>
+<p>{user.name}</p>
+<p>{isLoggedIn ? "Welcome" : "Please log in"}</p>
+{items.map(item => <li>{item}</li>)}
+{isAdmin && <button>Delete</button>}
+
+// ❌ Not Allowed
+<p>{if (user) { "Hi" }}</p>               // ❌
+<p>{for (let i = 0; i < 5; i++) { }}</p> // ❌
+<p>{const name = "Ali"}</p>             // ❌
+<p>{function test() { return "ok" }}</p> // ❌
