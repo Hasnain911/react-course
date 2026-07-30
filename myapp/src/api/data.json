@@ -1,5 +1,6 @@
  [
   {
+    "id": 1,
     "name": "Great Wall of China",
     "country": "China",
     "location": "China",
@@ -8,6 +9,7 @@
     "image": "/great-wall.avif"
   },
   {
+    "id": 2,
     "name": "Petra",
     "country": "Jordan",
     "location": "Ma'an Governorate",
@@ -15,7 +17,7 @@
     "description": "An ancient city famous for its rock-cut architecture and water conduit system.",
     "image": "/petra.jpeg"
   },
-  {
+  { "id": 3,
     "name": "Christ the Redeemer",
     "country": "Brazil",
     "location": "Rio de Janeiro",
@@ -23,7 +25,7 @@
     "description": "An iconic Art Deco statue of Jesus Christ overlooking Rio de Janeiro.",
     "image": "/redeemer.jpg"
   },
-  {
+  {"id": 4,
     "name": "Machu Picchu",
     "country": "Peru",
     "location": "Cusco Region",
@@ -31,7 +33,7 @@
     "description": "An Incan citadel set high in the Andes Mountains.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg"
   },
-  {
+  {"id"   : 5,  
     "name": "Chichen Itza",
     "country": "Mexico",
     "location": "Yucatán",
@@ -39,7 +41,7 @@
     "description": "A large pre-Columbian city built by the Maya civilization.",
     "image": "/chichen.jpeg"
   },
-  {
+  {"id" : 6,  
     "name": "Roman Colosseum",
     "country": "Italy",
     "location": "Rome",
@@ -47,7 +49,7 @@
     "description": "A massive amphitheatre used for gladiatorial contests and public spectacles.",
     "image": "/roman.jpeg"
   },
-  {
+  {"id" : 7,  
     "name": "Taj Mahal",
     "country": "India",
     "location": "Agra, Uttar Pradesh",

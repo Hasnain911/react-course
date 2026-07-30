@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react"
+import styled from "styled-components"
 
 const StyleComponent = () => {
-  return (
-    <div>StyleComponent</div>
-  )
+  const ButtonThapa = styled.button`
+    background-color: #7dcea0;
+  `
+  return <ButtonThapa>StyleComponent</ButtonThapa>
 }
 
 export default StyleComponent
@@ -11,7 +13,9 @@ export default StyleComponent
 // Notes
 // Step 1: You render the component
 
-// <ButtonThapa rating={rating}>Watch Now</ButtonThapa>
+{
+  /* <ButtonThapa rating={rating}>Watch Now</ButtonThapa> */
+}
 
 // This is always the very first step.
 // Just like <MyComponent someProp="value" />, you’re telling React:

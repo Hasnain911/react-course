@@ -1,7 +1,7 @@
 import React from 'react'
 
  function ReactInterview1() {
-  const students = [4]
+  const students = [1,2,3]
   return (
    <>
    {/* issue */}
@@ -13,8 +13,8 @@ import React from 'react'
    {/* <p>{students.length === 0 && "No students found"}</p>  */}
    {/* <p>Number of students : {students.length}</p> */}
    {/* 3rd solution */}
-   <p>{Boolean(!students.length) && "No students found"}</p> 
-   <p>Number of students : {students.length}</p>
+   {/* <p>{Boolean(!students.length) && "No students found"}</p>  */}
+   {/* <p>Number of students : {students.length}</p> */}
     
    </>
   )

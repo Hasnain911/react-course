@@ -1,12 +1,12 @@
-// import { Fragment } from "react";
 // import Conditional from "./Conditional.jsx"
 import { useState } from "react"
+import styles from "./card.module.css"
 // import "./card.css"
-import styles from "./card.module.css";
 
 // const Card = (props) => {
 //   let {image,name,country,location,year_built,description} = props.data
-const Card = ({ data, elem, children }) => {
+// props getting from Sevenwonders.jsx
+const Card = ({ data, elem, reactElem, children }) => {
   let { image, name, country, location, year_built, description } = data //object destructuring
   let [elem1, elem2, elem3] = children //Array destructuring
   const [hover, setHover] = useState(false)
@@ -14,9 +14,11 @@ const Card = ({ data, elem, children }) => {
   const countryStyle = {
     backgroundColor: country === "Brazil" ? "lightgreen" : "transparent", // conditional
     padding: "5px",
-    borderRadius: "4px"
+    borderRadius: "4px",
   }
-   {console.log(styles)};
+  {
+    console.log(styles)
+  }
 
   return (
     <>
@@ -33,16 +35,16 @@ const Card = ({ data, elem, children }) => {
         <p>Year-Built :{year_built}</p>
         <p>Description :{description}</p>
         {/* 1️⃣ Using plain string + ternary, without CSS Modules */}
-{/* ✅ Works with global CSS only, not scoped */}
-{/* <p onMouseEnter={() => setHover(true)}
+        {/* ✅ Works with global CSS only, not scoped */}
+        {/* <p onMouseEnter={() => setHover(true)}
     onMouseLeave={() => setHover(false)} 
     className={hover ? "h-world" : "h-world-active"}>
     {elem}
 </p> */}
 
-{/* 2️⃣ Using template literals + global classes */}
-{/* ✅ Combines one static class with a conditional global class */}
-{/* <div
+        {/* 2️⃣ Using template literals + global classes */}
+        {/* ✅ Combines one static class with a conditional global class */}
+        {/* <div
   onMouseEnter={() => setHover(true)}
   onMouseLeave={() => setHover(false)}
   className={`b-radius ${cndtn}`} 
@@ -50,9 +52,9 @@ const Card = ({ data, elem, children }) => {
   {elem}
 </div> */}
 
-{/* 3️⃣ Using template literals + inline ternary */}
-{/* ✅ Same as above, but ternary is written inline inside template literal */}
-{/* <div
+        {/* 3️⃣ Using template literals + inline ternary */}
+        {/* ✅ Same as above, but ternary is written inline inside template literal */}
+        {/* <div
   onMouseEnter={() => setHover(true)}
   onMouseLeave={() => setHover(false)}
   className={`b-radius ${hover ? "h-world" : "h-world-active"}`} 
@@ -60,22 +62,20 @@ const Card = ({ data, elem, children }) => {
   {elem}
 </div> */}
 
-{/* 4️⃣ Using CSS Modules + template literals */}
-{/* ✅ Scoped classes from card.module.css, avoids global conflicts */}
-<div
-  onMouseEnter={() => setHover(true)}
-  onMouseLeave={() => setHover(false)}
-  className={`${styles["b-radius"]} ${hover ? styles["h-world"] : styles["h-world-active"]}`} 
- 
-  
->
-  {elem}
-</div>
+        {/* 4️⃣ Using CSS Modules + template literals */}
+        {/* ✅ Scoped classes from card.module.css, avoids global conflicts */}
+        <div
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          className={`${styles["b-radius"]} ${hover ? styles["h-world"] : styles["h-world-active"]}`}
+        >
+          {elem}
+        </div>
 
-  
-        <p>{elem1}</p>
-        <p>{elem2}</p>
-        <p>{elem3}</p>
+        {reactElem}
+        <div className="p-1">{elem1}</div>
+        {elem2}
+        {elem3}
       </li>
 
       {/* <Conditional /> */}

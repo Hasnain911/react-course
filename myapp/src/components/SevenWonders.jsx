@@ -5,12 +5,14 @@ const SevenWonders = () => {
   return (
    <>
       <ul>
-        {data.map((currentelem, index) => (
+        {data.map((currentelem, index) =>  (
+          
 
           <Card
             key={index}
             data={currentelem}
-            elem={"hello world"}
+            elem={"hello world"} // this is a string passed as props
+            reactElem = {<p>hi i am jsx passed to child as React element</p>}
           > <p>multiple jsx</p>
             <p>hi i am jsx1 passed to child as props</p>
             <p>hi i am jsx2 passed to child as props</p>
