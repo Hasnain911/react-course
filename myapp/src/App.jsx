@@ -14,6 +14,8 @@ import GrandParent from "./hooks/GrandParent.jsx"
 import DerivedState from "./hooks/DerivedState.jsx"
 import LiftingStateUp from "./hooks/LiftingStateUp.jsx"
 import Todo from "./projects/todo/Todo.jsx"
+import RegistrationForm from "./projects/Forms/RegistrationForm.jsx"
+import LoginForm from "./projects/Forms/LoginForm.jsx"
 
 
 const App = () => {
@@ -32,8 +34,11 @@ const App = () => {
       {/* <StateChallenge  />    */}
       {/* <GrandParent /> */}
       {/* <DerivedState/> */}
-      {/* <LiftingStateUp /> */}
+      <LiftingStateUp />
       {/* <Todo/> */}
+      {/* {<RegistrationForm />} */}
+      {/* {<LoginForm />} */}
+
     </>
   )
 }

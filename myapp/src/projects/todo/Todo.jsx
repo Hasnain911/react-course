@@ -30,6 +30,19 @@ const Todo = () => {
     })
     setTasks(updatedTasks)
   }
+ const handleCompletedTask = (currenelem) => {
+  const updatedTasks = tasks.map((task)=>{
+    if(task.id === currenelem.id){
+      return {
+        ...task, completed : !task.completed}
+  
+    }   return task})
+
+  
+ 
+   setTasks(updatedTasks)
+  } 
+ 
 
 
   return (
@@ -46,7 +59,7 @@ const Todo = () => {
         <section>
           <ul>
             {tasks.map((currelem, index) => (
-    <TaskList key={index} handleDeleteTask={handleDeleteTask} currelem = {currelem} index = {index}/>
+    <TaskList key={index} handleDeleteTask={handleDeleteTask} currelem = {currelem} handleCompletedTask= {handleCompletedTask} />
             ))}
           </ul>
           <section className={styles["clear-btn"]}>

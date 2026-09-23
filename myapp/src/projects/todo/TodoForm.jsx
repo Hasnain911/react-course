@@ -12,7 +12,7 @@ const TodoForm = (props) => {
           setInputvalue("")
           return
         } //If the task already exists in the tasks array, stop the function immediately.
-        setTasks([...tasks, inputvalue])
+        setTasks([...tasks, { id: inputvalue, content: inputvalue, completed: false }])
         setInputvalue("")
       }
   return (
