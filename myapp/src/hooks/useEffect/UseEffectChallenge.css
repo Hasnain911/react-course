@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+.challenge-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f0ff;
+  padding: 20px;
+}
+
+.challenge-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.challenge-card h1 {
+  font-size: 26px;
+  color: #29244a;
+  margin-bottom: 25px;
+}
+
+.count {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6c4ce4;
+  margin-bottom: 20px;
+}
+
+.increment-btn {
+  background: #6c4ce4;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.increment-btn:hover {
+  background: #5235c4;
+}
+
+.name {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #333;
+}
+
+.name-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #d6d1e8;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.name-input:focus {
+  border-color: #6c4ce4;
+  box-shadow: 0 0 0 3px rgba(108, 76, 228, 0.12);
+}
+
+.name-input::placeholder {
+  color: #aaa;
+}
