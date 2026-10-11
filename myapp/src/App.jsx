@@ -7,16 +7,16 @@ import SevenWonders from "./components/SevenWonders"
 import StyleComponent from "./components/StyleComponent.jsx"
 import EventHandling from "./components/EventHandling.jsx"
 import EventInPropsParent from "./components/EventInPropsParent.jsx"
-import EventPropagation from "./components/EventPropagation.jsx" 
+import EventPropagation from "./components/EventPropagation.jsx"
 import StateHook from "./hooks/StateHook.jsx"
 import StateChallenge from "./hooks/StateChallenge.jsx"
 import GrandParent from "./hooks/GrandParent.jsx"
 import DerivedState from "./hooks/DerivedState.jsx"
 import LiftingStateUp from "./hooks/LiftingStateUp.jsx"
 import Todo from "./projects/todo/Todo.jsx"
-import RegistrationForm from "./projects/Forms/RegistrationForm.jsx"
-import LoginForm from "./projects/Forms/LoginForm.jsx"
-
+import RegistrationForm from "./Forms/RegistrationForm.jsx"
+import LoginForm from "./Forms/LoginForm.jsx"
+import ContactForm from "./Forms/ContactForm.jsx"
 
 const App = () => {
   return (
@@ -34,11 +34,11 @@ const App = () => {
       {/* <StateChallenge  />    */}
       {/* <GrandParent /> */}
       {/* <DerivedState/> */}
-      <LiftingStateUp />
+      {/* <LiftingStateUp /> */}
       {/* <Todo/> */}
-      {/* {<RegistrationForm />} */}
-      {/* {<LoginForm />} */}
-
+      {/* {<RegistrationForm />}  */}
+      {/* {<LoginForm />}  */}
+      {/* <ContactForm /> */}
     </>
   )
 }
