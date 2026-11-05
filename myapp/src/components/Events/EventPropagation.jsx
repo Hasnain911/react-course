@@ -5,8 +5,8 @@ const EventPropagation = () => {
   return (
     <>
       {/* 1. Parent Layer */}
-      <div
-        className="container"
+        {/* Version 1 */}
+      <div  className="container"
         onClick={() => console.log("Parent Box Clicked")}
       >
         {/* 2. Child/Middle Layer */}
@@ -27,21 +27,28 @@ const EventPropagation = () => {
         </div>
       </div>
       {/* 1. Parent Layer */}
+       {/* Version 2 */}
       <div
         className="container"
+        // onClick = {() => console.log("Parent Box Clicked2")}
         onClickCapture={() => console.log("Parent Box Clicked")}
       >
         {/* 2. Child/Middle Layer */}
         <div
           className="mid-box"
+          // onClick={() => console.log("Middle Box Clicked2")}
           onClickCapture={() => console.log("Middle Box Clicked")}
         >
           {/* 3. Button Layer */}
           <button
             className="button"
-            onClickCapture={(e) => console.log("Button Clicked")}
+            // onClick={(e) => console.log("Button Clicked2")}
+            onClickCapture={(e) => {
+              console.log("Button Clicked")
+              // e.stopPropagation()
+            }}
           >
-            Click Me
+            Click Me2
           </button>
           {/* onClickCapture handles the event during the capturing phase (top → down), while onClick handles it during the bubbling phase (bottom → up). Since your code only uses onClickCapture, only the capturing phase callbacks are logged. */}
         </div>
@@ -91,3 +98,23 @@ export default EventPropagation
 
 // Code running on ancestors afterward
 // = Bubbling Phase
+
+
+
+// **Question:**
+
+// I have two separate versions of event propagation code in my React component. When I click on the `Click Me2` button in the second version, why don't the event handlers of the first version fire, even though the event travels back up to the document during the bubbling phase?
+
+// **Answer:**
+
+// Because both versions have separate DOM trees.
+
+// When I click `Click Me2`, the event travels only along the DOM path of the second version:
+
+// Capturing: `Document → Version 2 Parent → Version 2 Middle → Click Me2`
+
+// Bubbling: `Click Me2 → Version 2 Middle → Version 2 Parent → Document`
+
+// The first version's handlers do not fire because its elements are not part of the clicked button's DOM propagation path.
+
+// **Rule:** An event travels only through the DOM path of the element that was clicked, not through every element in the React component.

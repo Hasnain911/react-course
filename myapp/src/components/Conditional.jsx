@@ -1,6 +1,6 @@
 function Conditional() {
-  const age = 19
-   if (age <= 18) {
+  const age = 17
+   if (age < 18) {
       return <p> you can't meet with handsome </p>
      }
   return (

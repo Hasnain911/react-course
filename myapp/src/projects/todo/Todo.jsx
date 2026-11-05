@@ -1,65 +1,66 @@
-import React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styles from "./Todo.module.css"
-
-
-import { useEffect } from "react"
 import TodoForm from "./TodoForm"
 import TaskList from "./TaskList"
+import DateTimeComp from "./DateTimeComp"
+
+const initialData = () => JSON.parse(localStorage.getItem("Task")) || []
+// console.log(initialData)
 
 const Todo = () => {
   const [inputvalue, setInputvalue] = useState("")
-  const [tasks, setTasks] = useState([])
-  const [time, setTime] = useState(new Date().toLocaleTimeString())
-  const [date, setDate] = useState(new Date().toLocaleDateString())
-
-  
+  const [tasks, setTasks] = useState(initialData) // Lazy initializer
 
   useEffect(() => {
-    const id = setInterval(() => {
-      const now = new Date() //now is a Date object representing the current date and time.This ensures both the time and date come from the same exact moment and avoids creating two separate Date objects.
-      setTime(now.toLocaleTimeString())
-      setDate(now.toLocaleDateString())
-    }, 1000)
-    // console.log("papa") // To check if the useEffect is running every second or just once.
-    return () => clearInterval(id)
-  }, [])
-    const handleDeleteTask = (taskToDelete) => {
+    localStorage.setItem("Task", JSON.stringify(tasks))
+  }, [tasks])
+
+  const handleDeleteTask = (taskToDelete) => {
     const updatedTasks = tasks.filter((task, i) => {
       return task !== taskToDelete
     })
     setTasks(updatedTasks)
   }
- const handleCompletedTask = (currenelem) => {
-  const updatedTasks = tasks.map((task)=>{
-    if(task.id === currenelem.id){
-      return {
-        ...task, completed : !task.completed}
   
-    }   return task})
+  const handleCompletedTask = (currenelem) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === currenelem.id) {
+        return {
+          ...task,
+          completed: !task.completed,
+        }
+      }
+      return task
+    })
 
-  
- 
-   setTasks(updatedTasks)
-  } 
- 
-
+    setTasks(updatedTasks)
+  }
 
   return (
     <section className={styles["todo-container"]}>
       <header>
         <h1>Todo List</h1>
         <h2 className={styles.datetime}>
-          {date} - {time}
+          <DateTimeComp />
         </h2>
       </header>
       <section className={styles["todo-form"]}>
-       <TodoForm  inputvalue = {inputvalue} setInputvalue= {setInputvalue} tasks={tasks} setTasks={setTasks} />
-       <section/>
+        <TodoForm
+          inputvalue={inputvalue}
+          setInputvalue={setInputvalue}
+          tasks={tasks}
+          setTasks={setTasks}
+        />
+        <section />
         <section>
           <ul>
             {tasks.map((currelem, index) => (
-    <TaskList key={index} handleDeleteTask={handleDeleteTask} currelem = {currelem} handleCompletedTask= {handleCompletedTask} />
+              <TaskList
+                key={index}
+                handleDeleteTask={handleDeleteTask}
+                currelem={currelem}
+                handleCompletedTask={handleCompletedTask}
+              />
             ))}
           </ul>
           <section className={styles["clear-btn"]}>

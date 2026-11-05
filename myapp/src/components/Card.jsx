@@ -2,27 +2,27 @@
 import { useState } from "react"
 import styles from "./card.module.css"
 // import "./card.css"
-
+// import "../index.css" //Global CSS file.
 // const Card = (props) => {
 //   let {image,name,country,location,year_built,description} = props.data
 // props getting from Sevenwonders.jsx
 const Card = ({ data, elem, reactElem, children }) => {
-  let { image, name, country, location, year_built, description } = data //object destructuring
+  let { id,image, name, country, location, year_built, description } = data //object destructuring
   let [elem1, elem2, elem3] = children //Array destructuring
   const [hover, setHover] = useState(false)
-  let cndtn = hover ? "h-world-active" : "h-world"
+  // let cndtn = hover ? "h-world-active" : "h-world"
   const countryStyle = {
     backgroundColor: country === "Brazil" ? "lightgreen" : "transparent", // conditional
     padding: "5px",
     borderRadius: "4px",
   }
   {
-    console.log(styles)
+    // console.log(styles)
   }
 
   return (
     <>
-      <li>
+      <li id={id} >
         <img
           src={image}
           alt={name}

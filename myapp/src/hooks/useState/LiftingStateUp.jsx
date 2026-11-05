@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react"
-import "../components/card.css"
+import "../../components/card.css"
 const LiftingStateUp = () => {
   const [hovered, setHovered] = useState(null)
 

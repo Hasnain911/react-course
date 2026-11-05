@@ -1,4 +1,3 @@
-import React from "react"
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import { MdDelete } from "react-icons/md"
 const TaskList = (props) => {
@@ -28,8 +27,9 @@ return (
     </span>
 
     <div>
-      <button>
-        <IoMdCheckmarkCircleOutline onClick={()=> handleCompletedTask(currelem)} />
+      <button onClick={()=> handleCompletedTask(currelem)
+         } aria-label="Toggle task completion" type="button">
+        <IoMdCheckmarkCircleOutline />
       </button>
 
       <button onClick={() => handleDeleteTask(currelem)}>

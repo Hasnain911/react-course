@@ -1,4 +1,5 @@
 import React from "react"
+// import "./event.css" 
 
 const EventHandling = () => {
 //   function handleButtonClick() {
@@ -23,7 +24,7 @@ const EventHandling = () => {
       <button onClick={handleButtonClick}>click Me</button>
       <br />
       {/* In React, event handlers receive the event object as an argument by default. However, when you use an arrow function directly in the onClick attribute without passing the event explicitly, React doesn't pass the event object to your handler function. This is because the arrow function creates a new function and calls your handler without passing any arguments. */}
-      <button onClick={(event) => handleButtonClick(event)}>click Me 2 </button>
+      {/* <button onClick={() => handleButtonClick()}>click Me 2 </button> */}
       <br />
       {/* /* //? Inline Event Handlers} */}
       <button onClick={(event) => console.log(event)}>Inline Function</button>

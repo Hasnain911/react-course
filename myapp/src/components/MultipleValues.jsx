@@ -26,10 +26,6 @@ const MultipleValues = () => {
     <>
       <MultipleValuesCard />
       <MultipleValuesCard />
-      <MultipleValuesCard />
-      <MultipleValuesCard />
-      <MultipleValuesCard />
-    
     </> 
 )  }
 

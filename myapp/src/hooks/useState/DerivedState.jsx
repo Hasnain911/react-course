@@ -20,9 +20,9 @@ const DerivedState = () => {
       <h1> No. of Users : {count}</h1>
       {/* Derived values: count and averageAge are calculated from the users state. */}
       <h1>Average age :{averageAge}</h1>
-      {/* <button onClick={() => setUsers(users.filter((user) => user.id !== 6))}>
+      <button onClick={() => setUsers(users.filter((user) => user.id !== 6))}>
         Delete User
-      </button> */}
+      </button>
       <button onClick = {UpdatedUsers}>
         Delete User
       </button>
